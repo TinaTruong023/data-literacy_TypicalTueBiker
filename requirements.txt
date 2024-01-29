@@ -1,0 +1,6 @@
+pandas
+tueplots
+matplotlib
+statsmodels
+scipy
+shapely
