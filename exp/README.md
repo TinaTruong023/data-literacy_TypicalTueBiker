@@ -1,26 +1,12 @@
-
 # Experiments Folder
 
-Here experiments (with algorithms) are placed such as jupyter notebooks.
-One can think of them like pages of a lab book.
+All the analysis done for this project is located in the jupyter notebooks contained in this folder.
+They are chronologically ordered and partially build upon each other.
 
+The analysis can be seperated into 3 main categories:
+ - Exploratory analysis of eco counter data consisting of [Counter Analysis](eval_001_CounterAnalysis.ipynb), [Trend Analysis](eval_002_TrendAnalysis.ipynb), [Week Analysis](eval_003_WeekAnalysis.ipynb) and [Day Analysis](eval_004_DayAnalysis.ipynb).
+ - Correlation analysis of weather data with the cyclists [Counter Weather Correlation](eval_005_CounterWeatherCorrelation.ipynb).
+ - Correlation analysis of fuel price data with the cyclists [Fuel Price Correlation](eval_006_FuelPriceCorrelation.ipynb)
 
-Naming conv: `exp_[AuthorInitials]_[Order]_[DescriptiveName]`\
-example: `exp_PH_001_HowToMultiplyTensors.ipynb`
-
-We want to use literate programming.\
-Example of a experiment description:
-```python
-"""
-exp_PH_001_HowToMultiplyTensors.py
-
-The standard order for collapsing indices in tensor multiplication in
-deep-learning packages (i.e. batch-first) is inconvenient for inference
-during optimization. Quantities like batch-variances can only be
-extracted when the order is exchanged.
-
-This experiment shows that the two formulations are in fact equivalent.
-
-Philipp Hennig, April 2014
-"""
-```
+Each notebooks walks through the process step by step and explains what was done. The results are shortly discussed after each step.
+Working through this should provide the user with a good knowledge about how a cyclist in Tübingen behaves and what affects their behaviour.
