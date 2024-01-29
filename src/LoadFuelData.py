@@ -21,7 +21,7 @@ class FuelData:
         :return: dataframe of combined years
         """
 
-        data = self.df[self.df["iso_timestamp"].dt.year.isin(years)]
+        data = self.df[self.df["iso_timestamp"].dt.year.isin(years)].copy()
         data.reset_index(inplace=True, drop=True)
 
         data["iso_timestamp"] = pd.to_datetime(data["iso_timestamp"], utc=True)
