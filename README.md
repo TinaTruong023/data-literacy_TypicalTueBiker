@@ -1,20 +1,52 @@
 
-# Typical Biker in Tübingen
+# Biking Trends in Tübingen: A Data-Driven Analysis
+**Authors** Stephan Amann, Tanja Huber, David Kleindiek, Tina Truong
 
-This is our project repository for the Data Literacy course (Uni Tübingen).
+GitHub repository for our final project of the 'Data Literacy' class at the Eberhard-Karls Universität Tübingen.
 
+The project report can be found [here](doc/report.pdf)
 
-Suggestion:
+## Overview
+This repository contains the research work conducted to analyze biking trends in Tübingen, Germany.
+The primary objective of this study is to develop a detailed profile of the typical cyclist in Tübingen by examining bike counting station data and its correlation with various external factors.
 
-- We use this for the setup of the structure and basically everything that would make it the finished project
-- then we make a new clean clean repo where we just upload all of this
+## Objectives
+ - Analyze cycling patterns in Tübingen using data from bike counting stations.
+ - Investigate the impact of weather conditions, fuel prices, and public events on cycling trends.
 
-Notes:
+## Repository Structure
 
-- migration should work, notebooks have all been run
-- missing: weather notebook, rework is in progress
-- comments/orders can be written in folder specific todo.txt files
+The repository is organized into several directories, each serving a specific purpose in the research project:
 
-## TODOs
-- Readmes schreiben
-- Repo umbenennen nach Paper Titel!
+ - [`src/`](src): Contains Python scripts for data processing and analysis.
+ - [`exp/`](exp): Jupyter notebooks detailing the experimental analysis, including counter analysis, trend analysis, and correlation studies.
+ - [`dat/`](dat): Data files used in the study, including bike counter data, event data, fuel price data, and weather data.
+ - [`doc/`](doc): Documentation and figures supporting the analysis.
+
+## Key Findings
+
+ - An overall increase in cyclists over the years was observed.
+ - Distinct cycling patterns emerge during holidays and weekends.
+ - Differences in cycling patterns were noted between urban and suburban areas.
+ - Weather conditions affect cycling, especially under extreme conditions.
+ - No clear correlation was found between fuel prices and cycling frequency.
+
+### Running the code
+1. Clone the repository:
+```bash
+git clone https://github.com/TinaTruong023/data-literacy_TypicalTueBiker.git
+cd data-literacy_TypicalTueBiker
+```
+2. Set Up a Virtual Environment (Optional but Recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
+3. Install Required Packages:
+```bash
+pip install -r requirements.txt
+```
+4. Run The Notebooks:
+```bash
+jupyter notebook exp/
+```
