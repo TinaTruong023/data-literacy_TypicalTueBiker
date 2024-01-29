@@ -1,4 +1,6 @@
 ## Events/Holidays
+Data should be loaded using the dedicated [Event Data Loader](LoadEventsData.py)
+
  - [COVID Dates](evd_covid_date.csv) contains events like lockdowns, school closures, mask requirements and other COVID related events.
  - [COVID Info](evd_covid_info.csv) supplies the necessary information to certain events.
  - [Holiday](evd_holiday.csv) all national holidays and regional holidays in Baden-Württemberg.
