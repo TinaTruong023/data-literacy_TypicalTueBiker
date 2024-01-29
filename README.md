@@ -14,3 +14,7 @@ Notes:
 - migration should work, notebooks have all been run
 - missing: weather notebook, rework is in progress
 - comments/orders can be written in folder specific todo.txt files
+
+## TODOs
+- Readmes schreiben
+- Repo umbenennen nach Paper Titel!
