@@ -4,7 +4,7 @@
 
 GitHub repository for our final project of the 'Data Literacy' class at the Eberhard-Karls Universität Tübingen.
 
-The project report can be found [here](doc/report.pdf)
+The project report is available [here](doc/report.pdf)
 
 ## Overview
 This repository contains the research work conducted to analyze biking trends in Tübingen, Germany.
