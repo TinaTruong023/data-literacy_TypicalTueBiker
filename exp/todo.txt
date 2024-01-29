@@ -1,0 +1,13 @@
+in eval_001:
+- need to do the legend better!
+- legend marker thickness at the end
+
+WiSe, SoSe marker haben start in legende sollte gleich sein
+
+in eval_002:
+- color weekly plot like the paper one?
+
+in the notebooks add in df.heads?
+
+in eval_004:
+is the daily week plot with 2x2 better or 1x4?
