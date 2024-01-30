@@ -17,7 +17,7 @@ The primary objective of this study is to develop a detailed profile of the typi
 
 ## Repository Structure
 
-The repository is organized into several directories, each serving a specific purpose in the research project:
+The repository is organized into several directories:
 
  - [`src/`](src): Contains Python scripts for data processing and analysis.
  - [`exp/`](exp): Jupyter notebooks detailing the experimental analysis, including counter analysis, trend analysis, and correlation studies.
