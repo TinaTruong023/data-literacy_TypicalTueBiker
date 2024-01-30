@@ -20,7 +20,7 @@ The primary objective of this study is to develop a detailed profile of the typi
 The repository is organized into several directories:
 
  - [`src/`](src): Contains Python scripts for data processing and analysis.
- - [`exp/`](eva): Jupyter notebooks detailing the analysis, including counter analysis, trend analysis, and correlation studies.
+ - [`eva/`](eva): Jupyter notebooks detailing the analysis, including counter analysis, trend analysis, and correlation studies.
  - [`dat/`](dat): Data files used in the study, including bike counter data, event data, fuel price data, and weather data.
  - [`doc/`](doc): Documentation and figures supporting the analysis.
 
