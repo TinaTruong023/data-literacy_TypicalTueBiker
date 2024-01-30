@@ -62,6 +62,7 @@ class EcoCounterData:
         :param years: list of years
         :param counter_id: list of counter ids, if None all counters are returned
         :param corrected: boolean, if True corrected data is returned, else uncorrected data
+        :param time_as_index: boolean, if True index is set to iso_timestamp
         """
         if years is None:
             years = self.AVB_YEARS
@@ -101,7 +102,6 @@ class EcoCounterData:
         :param years: list of years
         :return: dataframe of combined years
         """
-        # TODO TODO TODO
         data_list = []
         # get last day of previous year
         if int(years[0]) > 2013:
