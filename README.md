@@ -1,5 +1,5 @@
 
-# Biking Trends in Tübingen: A Data-Driven Analysis
+# Tübingen on Two Wheels: Profile a Typical Cyclist
 **Authors** Stephan Amann, Tanja Huber, David Kleindiek, Tina Truong
 **Date** 30.01.2024
 
