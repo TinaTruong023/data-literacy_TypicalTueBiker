@@ -1,5 +1,5 @@
 ## Events/Holidays
-Data should be loaded using the dedicated [Event Data Loader](LoadEventsData.py)
+Data should be loaded using the dedicated [Event Data Loader](../../src/LoadEventsData.py)
 
  - [COVID Dates](evd_covid_date.csv) Contains events like lockdowns, school closures, mask requirements and other COVID related events.
  - [COVID Info](evd_covid_info.csv) Supplies the necessary information to certain events.
