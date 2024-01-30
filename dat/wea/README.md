@@ -1,5 +1,5 @@
 # Weather Data
-Data should be loaded using the dedicated [Weather Data Loader](LoadWeatherData.py)
+Data should be loaded using the dedicated [Weather Data Loader](../../src/LoadWeatherData.py)
 
 __The weather data obtained through [Meteoblue](https://content.meteoblue.com/de/ueber-uns/rechtliches/agb) can not be made publicly available and is therefore not included in this repository.__
 
