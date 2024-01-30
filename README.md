@@ -24,14 +24,6 @@ The repository is organized into several directories:
  - [`dat/`](dat): Data files used in the study, including bike counter data, event data, fuel price data, and weather data.
  - [`doc/`](doc): Documentation and figures supporting the analysis.
 
-## Key Findings
-
- - An overall increase in cyclists over the years was observed.
- - Distinct cycling patterns emerge during holidays and weekends.
- - Differences in cycling patterns were noted between urban and suburban areas.
- - Weather conditions affect cycling, especially under extreme conditions.
- - No clear correlation was found between fuel prices and cycling frequency.
-
 ### Running the code
 1. Clone the repository:
 ```bash
