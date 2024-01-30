@@ -1,11 +1,12 @@
 
 # Tübingen on Two Wheels: Profile a Typical Cyclist
 **Authors** Stephan Amann, Tanja Huber, David Kleindiek, Tina Truong
+
 **Date** 30.01.2024
 
 GitHub repository for the final project of the 'Data Literacy' class during the winter term at the Eberhard-Karls Universität Tübingen.
 
-The project report is available [here](doc/report.pdf)
+The project report is available [here](doc/Tuebingen_on_Two_Wheels_-_Profile_a_Typical_Cyclist.pdf)
 
 ## Overview
 This repository contains the research work conducted to analyze biking trends in Tübingen, Germany.
