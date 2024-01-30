@@ -11,3 +11,5 @@ The csv files in this folder contain the following columns and can be read using
 | 4 |  channel_id
 | 5 |  counter_site
 | 6 |  counter_site_id
+
+Channels denote the direction the counter is passed.
