@@ -40,7 +40,7 @@ MARKER_COLORS = [
     turn_to_np_rgb("7018d3"), #7018d3
     turn_to_np_rgb("BD22AB"), #BD22AB
     turn_to_np_rgb("424470"), #424470
-    turn_to_np_rgb("22826A")  #22826A
+    turn_to_np_rgb("44AA99")  #44AA99
     # turn_to_np_rgb("1077f3"), #1077f3
     # turn_to_np_rgb("41b6c4"), #41b6c4
     # turn_to_np_rgb("c7e9b4"), #c7e9b4

@@ -20,15 +20,15 @@ COUNTER = {
         'color': ct.COUNTER_COLORS[2],
         'marker': '.',
     },
-    "FSC": {'color': ct.COUNTER_COLORS[3]}
+    "FSC": {'color': ct.COUNTER_COLORS[3], 'name': 'Fahrradtunnel & Unterführung Steinlachallee'},
 }
 COUNTER_ORDER = [100003358, 100003359, 100026408, "FSC"]
 WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 LEGEND_COUNTER_ORDER = {
-    "standard": [0,1,2,3,4,5],
+    "standard": [0,1,2,3,5,4],
     "covid_standard": [0,1,2,4,3,5],
     "uncorrected": [0,1,2,3,5,4],
-    "covid_uncorrected": [0,1,2,3,5,4,6]
+    "covid_uncorrected": [0,1,2,3,5,6,4]
 }
 COUNT_STYLE = {
     "c": ct.PRIMARY_COLORS[0],
@@ -122,7 +122,7 @@ def plot_daily_per_counter(daily_bike_dfs, avb_counter, year, figure_obj,
                 df_counter_year_uncorrected.index.date,
                 df_counter_year_uncorrected["zählstand"],
                 color=uncorrected_color,
-                label="Uncorrected Counted Bikes per Day",
+                label="Uncorrected Counted Bike per Day",
                 linestyle=(0,(1,1)),
                 ms=2, lw=1.5,
                 alpha=0.3
@@ -132,8 +132,8 @@ def plot_daily_per_counter(daily_bike_dfs, avb_counter, year, figure_obj,
             df_counter_year.index, df_counter_year["zählstand"],
             marker=COUNT_STYLE["m"], ms=COUNT_STYLE["ms"]*NOTEBOOK_FACTOR,
             ls=COUNT_STYLE["ls"], lw=COUNT_STYLE["lw"]*NOTEBOOK_FACTOR,
-            alpha=COUNT_STYLE["a"],
-            color=COUNTER[counter]["color"],
+            alpha=COUNT_STYLE["a"]+0.05,
+            color=COUNTER[counter]["color"]*0.9,
             label="Daily Counted Bikes"
         )
 
@@ -157,9 +157,9 @@ def plot_daily_per_counter(daily_bike_dfs, avb_counter, year, figure_obj,
         ax[i].grid(axis="x", which="major", ls="-", alpha=0.3)
         ax[i].grid(axis="x", which="minor", ls=":", alpha=0.25)
         ax[i].grid(axis="y", which="major", ls=":", alpha=0.2)
-        ax[i].set_ylabel("Counted Bikes")
-    ax[-1].set_xlabel("Day in a Year")
-    fig.suptitle(f"Daily bike counts per counter in {year}")
+        ax[i].set_ylabel("Bike Count")
+    ax[-1].set_xlabel("Time (in Days)")
+    fig.suptitle(f"Daily Bike Counts per Counter in {year}")
     fig.align_labels()
     # return custom_leg
 
@@ -204,7 +204,7 @@ def plot_seasonal_decomposition(decomp_obj, figinfo,
             ax[i].grid(axis="x", which="minor", ls=":", alpha=0.3)
             ax[i].grid(axis="y", which="major", ls="-", alpha=0.2)
 
-        ax[i].set_ylabel("Counted Bikes")
+        ax[i].set_ylabel("Bike Count")
         if i<2:
             pass
         else:
@@ -239,11 +239,11 @@ def plot_seasonal_decomposition(decomp_obj, figinfo,
     else:
         if len(counter_id) == 1:
             if week_view:
-                fig.suptitle(f"Weekly Trend on {COUNTER[counter_id[0]]['name']}: Winodwed View on {show_window[0].strftime('%B')} in {show_window[0].strftime('%Y')}")
+                fig.suptitle(f"Weekly Trend on {COUNTER[counter_id[0]]['name']}: Winodwed View on {show_window[0].strftime('%B')} in {show_window[0].strftime('%Y')}",)
             else:
-                fig.suptitle("Seasonal Decomposition of Summed Bike Counts in Tübingen for Counter {} ({} - {})".format(COUNTER[counter_id[0]]["name"], min(d_years), max(d_years)))
+                fig.suptitle(f"Seasonal Decomposition of Summed Bike Counts in Tübingen for Counter {COUNTER[counter_id[0]]['name']} ({min(d_years)} - {max(d_years)}",)
         else:
-            fig.suptitle(f"Seasonal Decomposition of Summed Bike Counts in Tübingen for Counters {combine_counters} ({min(d_years)} - {max(d_years)})")
+            fig.suptitle(f"Seasonal Decomposition of Summed Bike Counts in Tübingen\nfor Counters {combine_counters} ({min(d_years)} - {max(d_years)})")
 
 def plot_avg_weekday(wd_data, weekday, figinfo, years=None, counter_id=None,
                      plot_directions=False, ymax=None):
@@ -269,14 +269,14 @@ def plot_avg_weekday(wd_data, weekday, figinfo, years=None, counter_id=None,
             in_mean,
             color=ct.PRIMARY_COLORS[1],
             ls=(0, (1, 1)),
-            label="Mean Count Direction to Tübingen"
+            label="Mean Count: To Tübingen"
         )
         ax.plot(
             out_mean.index,
             out_mean,
             ls=(0, (1, 1)),
             color=ct.AREA_COLORS[2],
-            label="Mean Count Direction from Tübingen"
+            label="Mean Count: From Tübingen"
         )
     counter_names = "All Tübingen Counters"
     if counter_id is not None:

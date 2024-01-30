@@ -9,7 +9,7 @@ COLORS = {
     "covid_date":   ct.AREA_COLORS[1],
     "holiday":      ct.MARKER_COLORS[0],
     "marker":       rgb.tue_dark,
-    "lecture":      [ct.MARKER_COLORS[1],
+    "lecture":      [ct.MARKER_COLORS[3],
                      ct.MARKER_COLORS[2]],
 }
 LINESTYLE = {
@@ -17,7 +17,7 @@ LINESTYLE = {
     "covid_date":   None,
     "holiday":      ["-",.8],
     "marker":       [(0, (10, 1)),1],
-    "lecture":      [[(0, (10, 1)), "-"],1.1],
+    "lecture":      [[(0, (10, 1)), "-."],1.1],
 }
 ALPHAS = {
     "schoolbreak":  0.2,
@@ -28,13 +28,12 @@ ALPHAS = {
 }
 
 def print_holiday_info(info):
-    print("Depicted holidays:\n\t{}\n".format(", ".join(info)))
+    print("Depicted holidays:\n\ {}\n".format(", ".join(info)))
 
 def print_coivd_info(info):
-    # TODO: when reaching COVID will do this
     print(f"Covid-Restrictions:")
     for key in info.keys():
-        print(f"\t{key}: {info[key]}\n")
+        print(f"\ {key}: {info[key]}\n")
 
 def plot_school_breaks(ed, years, axes, show_label=True, duplicates=True):
     def plot_school_breaks_one_axis(ed, years, ax, show_label):
@@ -101,14 +100,14 @@ def plot_marker(marker, axes):
                     marker.date(),
                     color=COLORS["marker"],
                     lw=LINESTYLE["marker"][1],
-                    alpha=ALPHAS["marker"],
+                    alpha=ALPHAS["marker"]-0.2,
                     zorder=2
                 )
                 ax.text(
                     marker.date(),
-                    ax.get_ylim()[0] + 0.02 * (ax.get_ylim()[1] - ax.get_ylim()[0]),
+                    ax.get_ylim()[0]+0.02 * (ax.get_ylim()[1] - ax.get_ylim()[0]),
                     s=marker.strftime("%d.%m"),
-                    color=COLORS["marker"],
+                    color=ct.PRIMARY_COLORS[0],
                     rotation=90,
                     zorder=10
                 )
@@ -171,7 +170,7 @@ def plot_lecture_period(ed, years, axes, show_label=True, duplicates=True):
                         lw=LINESTYLE["lecture"][1],
                         linestyle=LINESTYLE["lecture"][0][0],
                         alpha=ALPHAS["lecture"],
-                        zorder=1,
+                        zorder=2,
                         label=legend
                     )
                 legend = "_nolegend_"
@@ -185,7 +184,7 @@ def plot_lecture_period(ed, years, axes, show_label=True, duplicates=True):
                         lw=LINESTYLE["lecture"][1],
                         linestyle=LINESTYLE["lecture"][0][1],
                         alpha=ALPHAS["lecture"],
-                        zorder=1,
+                        zorder=2,
                         label=legend
                     )
     for i,axis in enumerate(axes):
