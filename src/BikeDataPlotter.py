@@ -241,7 +241,7 @@ def plot_seasonal_decomposition(decomp_obj, figinfo,
             if week_view:
                 fig.suptitle(f"Weekly Trend on {COUNTER[counter_id[0]]['name']}: Winodwed View on {show_window[0].strftime('%B')} in {show_window[0].strftime('%Y')}",)
             else:
-                fig.suptitle(f"Seasonal Decomposition of Summed Bike Counts in Tübingen for Counter {COUNTER[counter_id[0]]['name']} ({min(d_years)} - {max(d_years)}",)
+                fig.suptitle(f"Seasonal Decomposition of Summed Bike Counts in Tübingen for Counter {COUNTER[counter_id[0]]['name']} ({min(d_years)} - {max(d_years)})",)
         else:
             fig.suptitle(f"Seasonal Decomposition of Summed Bike Counts in Tübingen\nfor Counters {combine_counters} ({min(d_years)} - {max(d_years)})")
 

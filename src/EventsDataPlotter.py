@@ -17,7 +17,7 @@ LINESTYLE = {
     "covid_date":   None,
     "holiday":      ["-",.8],
     "marker":       [(0, (10, 1)),1],
-    "lecture":      [[(0, (10, 1)), "-."],1.1],
+    "lecture":      [[(0, (10, 1)), "-"],1.1],
 }
 ALPHAS = {
     "schoolbreak":  0.2,
@@ -151,8 +151,8 @@ def plot_covid(ed, years, axes, show_label=True, show_abbr=True):
     return [plot_covid_one_axis(ed, years, axis, show_label, show_abbr) for axis in axes][0]
 
 
-def plot_lecture_period(ed, years, axes, show_label=True, duplicates=True):
-    def plot_lecture_period_axis(ed, years, ax, show_label):
+def plot_lecture_period(ed, years, axes, show_label=True, duplicates=True, no_lbl=False):
+    def plot_lecture_period_axis(ed, years, ax, show_label, no_lbl=False):
         data = ed.data["lecture"]
         year_data = data[(data["start"].dt.year.isin(years)) | (data["end"].dt.year.isin(years))]
         show_label_1 = show_label
@@ -173,6 +173,14 @@ def plot_lecture_period(ed, years, axes, show_label=True, duplicates=True):
                         zorder=2,
                         label=legend
                     )
+                    ax.text(
+                        row["start"].date(),
+                        ax.get_ylim()[0]+0.06 * (ax.get_ylim()[1] - ax.get_ylim()[0]),
+                        s="LStart",#if "SS" in row["semester"] else "SoSe",
+                        color=COLORS["lecture"][0] if "WS" in row["semester"] else COLORS["lecture"][1],
+                        rotation=90,
+                        zorder=10
+                    )
                 legend = "_nolegend_"
                 if row["end"].year == year:
                     if show_label_2:
@@ -187,6 +195,18 @@ def plot_lecture_period(ed, years, axes, show_label=True, duplicates=True):
                         zorder=2,
                         label=legend
                     )
+                    ax.text(
+                        row["end"].date(),
+                        ax.get_ylim()[0]+0.06 * (ax.get_ylim()[1] - ax.get_ylim()[0]),
+                        s="LEnd",#"WiSe" if "SS" in row["semester"] else "SoSe",
+                        color=COLORS["lecture"][1] if "SS" in row["semester"] else COLORS["lecture"][0],
+                        rotation=90,
+                        zorder=10
+                    )
+        return 1
+
+    no_lbl = True
     for i,axis in enumerate(axes):
         lbl = show_label if i > 0 else duplicates
-        plot_lecture_period_axis(ed, years, axis, lbl)
+
+        plot_lecture_period_axis(ed, years, axis, lbl )
