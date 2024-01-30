@@ -1,8 +1,9 @@
 
 # Biking Trends in Tübingen: A Data-Driven Analysis
 **Authors** Stephan Amann, Tanja Huber, David Kleindiek, Tina Truong
+**Date** 30.01.2024
 
-GitHub repository for our final project of the 'Data Literacy' class at the Eberhard-Karls Universität Tübingen.
+GitHub repository for the final project of the 'Data Literacy' class during the winter term at the Eberhard-Karls Universität Tübingen.
 
 The project report is available [here](doc/report.pdf)
 
