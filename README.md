@@ -41,5 +41,5 @@ pip install -r requirements.txt
 ```
 4. Run The Notebooks:
 ```bash
-jupyter notebook exp/
+jupyter notebook eva/
 ```
